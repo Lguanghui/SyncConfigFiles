@@ -44,9 +44,7 @@ def commit_changes():
     repo = git.Repo(".")
     repo.git.add(A=True)
     repo.index.commit("feat: sync files.")
-    # repo.git.commit("-m", "feat: sync files.", author="meetguanghuiliang@gmail.com")
-
-    # repo.commit("feat: sync files")
+    repo.git.push("--set-upstream", "origin", "main")
 
 
 if __name__ == '__main__':
