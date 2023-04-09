@@ -42,8 +42,9 @@ def get_new_file_name(file_name):
 
 def commit_changes():
     repo = git.Repo(".")
-    repo.git.add(A=True)
-    repo.git.commit("-m", "feat: sync files.")
+    if repo.is_dirty():
+        repo.git.add(A=True)
+        repo.git.commit("-m", "feat: sync files.")
     repo.git.push("--set-upstream", "origin", "main")
 
 
