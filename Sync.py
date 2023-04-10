@@ -14,6 +14,7 @@
 
 import git
 import shutil
+import os
 
 
 def read_cfg():
@@ -29,6 +30,8 @@ def read_cfg():
 
 
 def copy_replace_files():
+    if not os.path.exists("ConfigFiles"):
+        os.makedirs("ConfigFiles")
     files = read_cfg()
     for file in files:
         new_name = get_new_file_name(file)
@@ -37,7 +40,7 @@ def copy_replace_files():
 
 def get_new_file_name(file_name):
     new_name = file_name.split("/")[-1]
-    return new_name
+    return os.getcwd() + "/ConfigFiles/" + new_name
 
 
 def commit_changes():
