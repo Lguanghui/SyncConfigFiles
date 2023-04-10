@@ -17,6 +17,9 @@ import shutil
 import os
 
 
+dir_name = "ConfigFiles"
+
+
 def read_cfg():
     lines = []
     cfg_file = open("files.cfg", "r")
@@ -30,8 +33,8 @@ def read_cfg():
 
 
 def copy_replace_files():
-    if not os.path.exists("ConfigFiles"):
-        os.makedirs("ConfigFiles")
+    if not os.path.exists(dir_name):
+        os.makedirs(dir_name)
     files = read_cfg()
     for file in files:
         new_name = get_new_file_name(file)
@@ -40,7 +43,7 @@ def copy_replace_files():
 
 def get_new_file_name(file_name):
     new_name = file_name.split("/")[-1]
-    return os.getcwd() + "/ConfigFiles/" + new_name
+    return os.getcwd() + "/" + dir_name + "/" + new_name
 
 
 def commit_changes():
