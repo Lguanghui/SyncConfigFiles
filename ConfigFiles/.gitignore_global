@@ -1,0 +1,5 @@
+.DS_Store
+**/.DS_Store
+.DS_Store?
+# 忽略 vim 缓存文件
+*.un~
