@@ -222,16 +222,16 @@ let g:ycm_filetype_blacklist = {
 let g:ycm_seed_identifiers_with_syntax=1
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
-let g:ycm_filetype_whitelist = {
-			\ "c":1,
-			\ "cpp":1,
-			\ "objc":1,
-			\ "sh":1,
-			\ "zsh":1,
-			\ "zimbu":1,
-			\ "python":1,
-			\ "py":1,
-			\ }
+" let g:ycm_filetype_whitelist = {
+" 			\ "c":1,
+" 			\ "cpp":1,
+" 			\ "objc":1,
+" 			\ "sh":1,
+" 			\ "zsh":1,
+" 			\ "zimbu":1,
+" 			\ "python":1,
+" 			\ "py":1,
+" 			\ }
 
 " leaderf 配置
 let g:Lf_WindowPosition = 'popup'
@@ -344,5 +344,4 @@ endif
 " gUU
 "
 " 整行小写
-"
 " guu
