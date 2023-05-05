@@ -122,6 +122,7 @@ export PATH="$PATH:/Users/liangguanghui/flutter/bin"
 
 # Merge Request Shell Script
 export PATH="$PATH:/Users/liangguanghui/IdeaProjects/ShellScripts/GitShells"
+export PATH="$PATH:/Users/liangguanghui/IdeaProjects/ShellScripts/GitShells/dist"
 
 # arcanist
 export PATH="$PATH:/Users/liangguanghui/arcanist/bin"

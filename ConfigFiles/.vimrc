@@ -172,6 +172,17 @@ Plugin 'Lguanghui/vim-header'
 " 自动切换输入法插件
 Plugin 'ybian/smartim'
 
+" cmake 工具
+" Plugin 'cdelledonne/vim-cmake'
+Plugin 'ilyachur/cmake4vim'
+
+" 代码注释插件
+" gcc 注释当前行（不需要 leader 键）
+" gc 注释选中行
+" gcap 注释段落
+" 251,254Commentary 注释 251 行到 254 行
+Plugin 'tpope/vim-commentary'
+
 " 插件列表结束
 call vundle#end()
 
@@ -193,7 +204,7 @@ let g:ycm_global_ycm_extra_conf = '/Users/liangguanghui/.vim/configs/global_extr
 
 " YCM 配置。参考：http://howiefh.github.io/2015/05/22/vim-install-youcompleteme-plugin/
 " 关闭加载.ycm_extra_conf.py提示
-let g:ycm_confirm_extra_conf=0 
+let g:ycm_confirm_extra_conf=0
 " 输入第2个字符开始补全
 let g:ycm_min_num_of_chars_for_completion=2
 "注释和字符串中的文字也会被收入补全
@@ -209,6 +220,18 @@ let g:ycm_filetype_blacklist = {
       \}
 " 开启语义补全
 let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_filetype_whitelist = {
+			\ "c":1,
+			\ "cpp":1,
+			\ "objc":1,
+			\ "sh":1,
+			\ "zsh":1,
+			\ "zimbu":1,
+			\ "python":1,
+			\ "py":1,
+			\ }
 
 " leaderf 配置
 let g:Lf_WindowPosition = 'popup'
@@ -266,6 +289,23 @@ let g:header_blank_line = 1
 " 自动切换输入法插件
 let g:smartim_default = 'com.apple.keylayout.ABC'
 
+" 代码注释插件
+" 为python和shell等添加注释
+autocmd FileType python,shell,coffee set commentstring=#\ %s
+" 修改注释风格
+autocmd FileType java,c,cpp set commentstring=//\ %s
+
+" 设置 NERDTree 快捷键
+nnoremap <leader>nf :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+" 和翻页快捷键冲突
+" nnoremap <C-f> :NERDTreeFind<CR>
+
+" 当前 F 键功能：
+"	F2：一键运行代码（自己写的）
+"	F5：vimspector 运行代码（用于 debug）
+
 " 一键运行代码
 map <F2> :call CompileRunGcc()<CR>
     func! CompileRunGcc()
@@ -291,3 +331,18 @@ elseif &filetype == 'go'
 endif
 	endfunc
 
+
+
+"""""""""""""""""""""""
+" 一些常用指令
+"""""""""""""""""""""""
+
+" 左/右缩紧
+" << / >>
+"
+" 整行大写
+" gUU
+"
+" 整行小写
+"
+" guu
