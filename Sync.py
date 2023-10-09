@@ -57,3 +57,4 @@ def commit_changes():
 if __name__ == '__main__':
     copy_replace_files()
     commit_changes()
+    print("文件同步完成！")
