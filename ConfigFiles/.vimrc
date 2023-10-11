@@ -97,6 +97,8 @@ set directory=~/vimtmp//,.
 set encoding=UTF-8
 " 拷贝到系统剪切板
 set clipboard=unnamed
+" 让 vim 根据编辑的文件自动切换工作目录
+" set autochdir
 
 " 主题色
 " colorscheme molokai
@@ -155,7 +157,7 @@ Plugin 'tpope/vim-liquid'
 Plugin 'voldikss/vim-floaterm'
 
 " 调试工具
-Plugin 'puremourning/vimspector'
+" Plugin 'puremourning/vimspector'
 
 " 图标
 Plugin 'ryanoasis/vim-devicons'
@@ -294,6 +296,14 @@ let g:smartim_default = 'com.apple.keylayout.ABC'
 autocmd FileType python,shell,coffee set commentstring=#\ %s
 " 修改注释风格
 autocmd FileType java,c,cpp set commentstring=//\ %s
+
+" floaterm 快捷键配置
+" 使用 <C-\> <C-N> 从浮窗切换回 vim 命令
+let g:floaterm_keymap_new = '<Leader>ft'
+nnoremap <leader>fg :FloatermNew lazygit<CR>
+nnoremap <leader>fk :FloatermKill <CR>
+nnoremap <leader>fh :FloatermHide <CR>
+nnoremap <leader>fs :FloatermShow <CR>
 
 " 设置 NERDTree 快捷键
 nnoremap <leader>nf :NERDTreeFocus<CR>

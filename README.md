@@ -53,3 +53,7 @@ Sublime Merge 的自定义指令。
 这个配置默认没有开启支持鼠标滚动查看内容，需要按一下 `prefix + [` 进入复制模式，才可以用鼠标/触控板滚动查看历史内容。最后按 `esc` 退出复制模式。
 
 > 参考：https://www.cnblogs.com/bamanzi/archive/2012/08/17/mouse-wheel-in-tmux-screen.html
+
+## lvim/config.lua
+
+lunarVim 的自定义配置。

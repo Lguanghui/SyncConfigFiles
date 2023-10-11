@@ -3,3 +3,5 @@
 .DS_Store?
 # 忽略 vim 缓存文件
 *.un~
+# 忽略 python 编译缓存文件
+*.pyc

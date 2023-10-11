@@ -122,7 +122,9 @@ export PATH="$PATH:/Users/liangguanghui/flutter/bin"
 
 # Merge Request Shell Script
 export PATH="$PATH:/Users/liangguanghui/IdeaProjects/ShellScripts/GitShells"
-export PATH="$PATH:/Users/liangguanghui/IdeaProjects/ShellScripts/GitShells/dist"
+
+# blog
+export PATH="$PATH:/Users/liangguanghui/Documents/CodeLab/ShellScripts"
 
 # arcanist
 export PATH="$PATH:/Users/liangguanghui/arcanist/bin"
@@ -152,3 +154,9 @@ alias python="python3"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+alias p10k_update='git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull'
+
+# LunarVim
+export PATH="$HOME/.local/bin":$PATH
+# swift lsp path
+export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH"
