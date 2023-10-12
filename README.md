@@ -57,3 +57,6 @@ Sublime Merge 的自定义指令。
 ## lvim/config.lua
 
 lunarVim 的自定义配置。
+
+将 lvim 设置为 git commit 的编辑器后，可能会出现类似`hint: Waiting for your editor to close the file... error: There was a problem with the editor 'lvim'.
+Please supply the message using either -m or -F option.`的错误。这是 `smartim` 插件引起的，需要在 lvim 中删除这个插件
