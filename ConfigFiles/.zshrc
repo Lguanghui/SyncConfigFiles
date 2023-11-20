@@ -160,3 +160,8 @@ alias p10k_update='git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlev
 export PATH="$HOME/.local/bin":$PATH
 # swift lsp path
 export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH"
+
+export GIT_EDITOR=lvim
+
+# 如果遇到类似 fatal error: 'stdlib.h' file not found 的错误，可以加上这个环境变量。参考 https://github.com/golang/go/issues/27921
+export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"

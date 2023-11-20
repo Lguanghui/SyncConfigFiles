@@ -13,6 +13,14 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
+vim.cmd(
+    [[
+    set nocompatible
+    filetype on
+    filetype off 
+    ]]
+)
+
 -- 设置编码格式
 -- 设置缓存路径
 vim.cmd([[
@@ -29,11 +37,12 @@ lvim.plugins = {
 -- 251,254Commentary 注释 251 行到 254 行
   -- 'tpope/vim-commentary',
 
+    -- 暂时不可用，会影响 git commit
     -- 自动切换中英文输入法
-    {
-        "ybian/smartim",
-        config = function ()
-            vim.cmd("let g:smartim_default = 'com.apple.keylayout.ABC'")
-        end
-    }
+    -- {
+    --     "ybian/smartim",
+    --     config = function ()
+    --         vim.cmd("let g:smartim_default = 'com.apple.keylayout.ABC'")
+    --     end
+    -- }
 }
